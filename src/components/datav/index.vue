@@ -5,10 +5,10 @@
       <dv-border-box-1 class="main-container">
          <div class="rmctc-right-container">
            <dv-border-box-6 class="rmctc-chart-1">
-             <left-Chart-1 />
+             <Left-Chart-1 />
            </dv-border-box-6>
            <dv-border-box-6 class="rmctc-chart-2" :reverse="true">
-             <Right-Chart-2 />
+             <Left-Chart-2/>   
            </dv-border-box-6>
          </div>
         <div class="right-main-container">
@@ -43,7 +43,8 @@ import topHeader from './topHeader'
 import RightChart1 from './RightChart1'
 import RightChart2 from './RightChart2'
 import BottomCharts from './BottomCharts'
-import LeftChart1 from './leftChart1'
+import LeftChart1 from './LeftChart1'
+import LeftChart2 from './LeftChart2'
 
 export default {
   name: 'DataView',
@@ -54,6 +55,7 @@ export default {
     BottomCharts,
     mapCenter,
     LeftChart1,
+    LeftChart2
   },
   data () {
     return {}

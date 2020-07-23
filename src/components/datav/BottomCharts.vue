@@ -1,31 +1,33 @@
 <template>
   <div class="bottom-charts">
     <div class="bc-chart-item">
-      <div class="bcci-header">北京</div>
+    
       <dv-active-ring-chart :config="config1" />
+      <div class="bcci-header">北京</div>
       <!-- <Label-Tag :config="labelConfig" /> -->
     </div>
     <dv-decoration-2 class="decoration-1" :reverse="true" style="width:5px;" />
 
     <div class="bc-chart-item">
-      <div class="bcci-header">上海</div>
+      
       <dv-active-ring-chart :config="config2" />
+      <div class="bcci-header">上海</div>
        <!-- <Label-Tag :config="labelConfig" /> -->
     </div>
 
     <dv-decoration-2 class="decoration-2" :reverse="true" style="width:5px;" />
 
     <div class="bc-chart-item">
-      <div class="bcci-header">深圳</div>
       <dv-active-ring-chart :config="config3" />
+      <div class="bcci-header">深圳</div>
       <!-- <Label-Tag :config="labelConfig" /> -->
     </div>
 
     <dv-decoration-2 class="decoration-3" :reverse="true" style="width:5px;" />
 
     <div class="bc-chart-item">
-      <div class="bcci-header">杭州</div>
       <dv-active-ring-chart :config="config4" />
+       <div class="bcci-header">杭州</div>
        <!-- <Label-Tag :config="labelConfig" /> -->
     </div>
 

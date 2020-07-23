@@ -1,6 +1,7 @@
 <template>
   <div id="top-header">
-    <dv-decoration-8 class="header-left-decoration" />
+    <dv-decoration-8 class="header-left-decoration"/>
+    <div class="left-time">{{ gettime }}</div>  
     <dv-decoration-5 class="header-center-decoration" />
     <dv-decoration-8 class="header-right-decoration" :reverse="true" />
     <div class="center-title">城市实时监控大屏</div>
@@ -9,7 +10,30 @@
 
 <script>
 export default {
-  name: 'TopHeader'
+  name: 'TopHeader',
+  data() {
+    return {
+      gettime: ''  
+    }  
+  },
+  methods: {
+    getTime:function() {
+      var _this = this
+      let yy = new Date().getFullYear();
+      let mm = new Date().getMonth()+1;
+      let dd = new Date().getDate();
+      let hh = new Date().getHours();
+      let mf = new Date().getMinutes()<10 ? '0'+new Date().getMinutes() : new Date().getMinutes();
+      let ss = new Date().getSeconds()<10 ? '0'+new Date().getSeconds() : new Date().getSeconds();
+      _this.gettime = yy+'-'+mm+'-'+dd+' '+hh+':'+mf+':'+ss; 
+    },
+    currentTime() {
+      setInterval(this.getTime)  
+    }  
+  },
+  created() {
+    this.currentTime()  
+  }
 }
 </script>
 
@@ -32,7 +56,12 @@ export default {
     width: 25%;
     height: 60px;
   }
-
+  
+  .left-time {
+    position: absolute;
+    left: 5%;
+    top: 5px;  
+  }
   .center-title {
     position: absolute;
     font-size: 30px;
@@ -41,5 +70,6 @@ export default {
     top: 15px;
     transform: translateX(-50%);
   }
+ 
 }
 </style>

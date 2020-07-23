@@ -1,32 +1,28 @@
 <template>
   <div class="bottom-charts">
     <div class="bc-chart-item">
-      <div class="bcci-header">赵钱收费站</div>
+      <div class="bcci-header">北京</div>
       <dv-active-ring-chart :config="config1" />
-      <Label-Tag :config="labelConfig" />
     </div>
     <dv-decoration-2 class="decoration-1" :reverse="true" style="width:5px;" />
 
     <div class="bc-chart-item">
-      <div class="bcci-header">孙李收费站</div>
+      <div class="bcci-header">上海</div>
       <dv-active-ring-chart :config="config2" />
-      <Label-Tag :config="labelConfig" />
     </div>
 
     <dv-decoration-2 class="decoration-2" :reverse="true" style="width:5px;" />
 
     <div class="bc-chart-item">
-      <div class="bcci-header">周吴收费站</div>
+      <div class="bcci-header">深圳</div>
       <dv-active-ring-chart :config="config3" />
-      <Label-Tag :config="labelConfig" />
     </div>
 
     <dv-decoration-2 class="decoration-3" :reverse="true" style="width:5px;" />
 
     <div class="bc-chart-item">
-      <div class="bcci-header">郑王收费站</div>
+      <div class="bcci-header">杭州</div>
       <dv-active-ring-chart :config="config4" />
-      <Label-Tag :config="labelConfig" />
     </div>
 
   </div>
@@ -45,19 +41,19 @@ export default {
       config1: {
         data: [
           {
-            name: '收费站',
+            name: '一级医院',
             value: 356
           },
           {
-            name: '监控中心',
+            name: '二级医院',
             value: 215
           },
           {
-            name: '道路外场',
+            name: '三级医院',
             value: 90
           },
           {
-            name: '其他',
+            name: '私人诊所',
             value: 317
           }
         ],
@@ -69,19 +65,19 @@ export default {
       config2: {
         data: [
           {
-            name: '收费站',
+            name: '一级医院',
             value: 615
           },
           {
-            name: '监控中心',
+            name: '一级医院',
             value: 322
           },
           {
-            name: '道路外场',
+            name: '一级医院',
             value: 198
           },
           {
-            name: '其他',
+            name: '一级医院',
             value: 80
           }
         ],
@@ -93,20 +89,20 @@ export default {
       config3: {
         data: [
           {
-            name: '收费站',
-            value: 452
+            name: '一级医院',
+            value: 243234
           },
           {
-            name: '监控中心',
+            name: '一级医院',
             value: 512
           },
           {
-            name: '道路外场',
-            value: 333
+            name: '一级医院',
+            value: 23432
           },
           {
-            name: '其他',
-            value: 255
+            name: '一级医院',
+            value: 2343
           }
         ],
         color: ['#00baff', '#3de7c9', '#fff', '#ffc530', '#469f4b'],
@@ -117,20 +113,20 @@ export default {
       config4: {
         data: [
           {
-            name: '收费站',
-            value: 156
+            name: '一级医院',
+            value: 2343
           },
           {
-            name: '监控中心',
-            value: 415
+            name: '一级医院',
+            value: 32423
           },
           {
-            name: '道路外场',
-            value: 90
+            name: '一级医院',
+            value: 50
           },
           {
-            name: '其他',
-            value: 210
+            name: '一级医院',
+            value: 2000
           }
         ],
         color: ['#00baff', '#3de7c9', '#fff', '#ffc530', '#469f4b'],
@@ -154,9 +150,8 @@ export default {
   position: relative;
 
   .bc-chart-item {
-    width: 25%;
+    width: 15%;
     height: 100%;
-    padding-top: 20px;
     box-sizing: border-box;
   }
 

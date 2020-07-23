@@ -1,49 +1,47 @@
 <template>
-  <div class="right-chart-2">
-    <div class="rc1-header">孙七收费站</div>
+  <div class="right-chart-1">
+    <div class="rc1-header">城市环境</div>
 
     <div class="rc1-chart-container">
       <div class="left">
-        <div class="number">267</div>
+        <div class="number">262</div>
         <div>设备运行总数</div>
       </div>
 
-      <dv-charts class="right" :option="option" />
+      <dv-capsule-chart class="right" :config="config" />
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'RightChart2',
+  name: 'RightChart1',
   data () {
     return {
-      option: {
-        series: [
+      config: {
+        data: [
           {
-            type: 'pie',
-            data: [
-              { name: '收费系统', value: 93 },
-              { name: '通信系统', value: 66 },
-              { name: '监控系统', value: 52 },
-              { name: '供配电系统', value: 34 },
-              { name: '其他', value: 22 }
-            ],
-            radius: ['45%', '65%'],
-            insideLabel: {
-              show: false
-            },
-            outsideLabel: {
-              labelLineEndLength: 10,
-              formatter: '{percent}%\n{name}',
-              style: {
-                fontSize: 14,
-                fill: '#fff'
-              }
-            }
+            name: '收费系统',
+            value: 25
+          },
+          {
+            name: '通信系统',
+            value: 66
+          },
+          {
+            name: '监控系统',
+            value: 123
+          },
+          {
+            name: '供配电系统',
+            value: 72
+          },
+          {
+            name: '其他',
+            value: 99
           }
         ],
-        color: ['#00baff', '#3de7c9', '#fff', '#ffc530', '#469f4b']
+        unit: '件'
       }
     }
   }
@@ -51,7 +49,7 @@ export default {
 </script>
 
 <style lang="less">
-.right-chart-2 {
+.right-chart-1 {
   width: 100%;
   height: 100%;
   display: flex;

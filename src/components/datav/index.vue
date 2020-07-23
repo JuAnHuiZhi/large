@@ -3,55 +3,57 @@
     <dv-full-screen-container>
        <top-header />
       <dv-border-box-1 class="main-container">
-        <dv-border-box-8 class="left-chart-container">
-          <Left-Chart-1 />
-          <Left-Chart-2 />
-          <Left-Chart-3 />
-        </dv-border-box-8>
+         <div class="rmctc-right-container">
+           <dv-border-box-6 class="rmctc-chart-1">
+             <left-Chart-1 />
+           </dv-border-box-6>
+           <dv-border-box-6 class="rmctc-chart-2" :reverse="true">
+             <Right-Chart-2 />
+           </dv-border-box-6>
+         </div>
         <div class="right-main-container">
           <div class="rmc-top-container">
             <dv-border-box-6 class="rmctc-left-container">
-              <Center-Cmp />
+              <mapCenter />
             </dv-border-box-6>
             <div class="rmctc-right-container">
               <dv-border-box-6 class="rmctc-chart-1">
                 <Right-Chart-1 />
               </dv-border-box-6>
-              <dv-border-box-4 class="rmctc-chart-2" :reverse="true">
+              <dv-border-box-6 class="rmctc-chart-2" :reverse="true">
                 <Right-Chart-2 />
-              </dv-border-box-4>
+              </dv-border-box-6>
+              <dv-border-box-6 class="rmctc-chart-3">
+                <Right-Chart-2 />  
+              </dv-border-box-6>
             </div>
           </div>
-          <dv-border-box-4 class="rmc-bottom-container">
+          <dv-border-box-6 class="rmc-bottom-container">
             <Bottom-Charts />
-          </dv-border-box-4>
+          </dv-border-box-6>
         </div>
-      </dv-border-box-1>s
+      </dv-border-box-1>
     </dv-full-screen-container>
   </div>
 </template>
 
 <script>
+import mapCenter from './mapCenter'
 import topHeader from './topHeader'
-import LeftChart1 from './LeftChart1'
-import LeftChart2 from './LeftChart2'
-import LeftChart3 from './LeftChart3'
-import CenterCmp from './CenterCmp'
 import RightChart1 from './RightChart1'
 import RightChart2 from './RightChart2'
 import BottomCharts from './BottomCharts'
+import LeftChart1 from './leftChart1'
 
 export default {
   name: 'DataView',
   components: {
     topHeader,
-    LeftChart1,
-    LeftChart2,
-    LeftChart3,
-    CenterCmp,
     RightChart1,
     RightChart2,
-    BottomCharts
+    BottomCharts,
+    mapCenter,
+    LeftChart1,
   },
   data () {
     return {}
@@ -141,7 +143,7 @@ export default {
     height: 35%;
   }
 
-  .rmctc-chart-1, .rmctc-chart-2 {
+  .rmctc-chart-1, .rmctc-chart-2 , .rmctc-chart-3{
     height: 50%;
   }
 }

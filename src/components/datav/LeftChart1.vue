@@ -1,83 +1,176 @@
 <template>
   <div class="left-chart-1">
-    <div class="lc1-header">张三收费站</div>
-    <div class="lc1-details">设备运行总数<span>430</span></div>
-    <dv-capsule-chart class="lc1-chart" :config="config" />
-    <dv-decoration-2 style="height:10px;" />
-  </div>
+    <div class="rc1-header">城市交通</div> 
+      <dv-decoration-4 :reverse="true" class="city-dec" :color="['#07A6FF', '#07A4FC']"/> 
+    <dv-charts class="lacharts" :option="option"/>        
+  </div>      
 </template>
-
 <script>
 export default {
-  name: 'LeftChart1',
+  name: 'TopRightCmp',
   data () {
     return {
-      config: {
-        data: [
+      option: {
+        legend: {
+          data: [
+            {
+              name: '收费系统',
+              color: '#00baff'
+            },
+            {
+              name: '监控系统',
+              color: '#ff5ca9'
+            },
+            {
+              name: '通信系统',
+              color: '#3de7c9'
+            },
+            {
+              name: '供配电系统',
+              color: '#f5d94e'
+            }
+          ],
+          textStyle: {
+            fill: '#fff'
+          }
+        },
+        xAxis: {
+          data: [
+            '10/01', '10/02', '10/03', '10/04', '10/05', '10/06', '10/07'
+          ],
+          axisLine: {
+            style: {
+              stroke: '#999'
+            }
+          },
+          axisLabel: {
+            style: {
+              fill: '#999'
+            }
+          },
+          axisTick: {
+            show: false
+          }
+        },
+        yAxis: {
+          data: 'value',
+          splitLine: {
+            show: false
+          },
+          axisLine: {
+            style: {
+              stroke: '#999'
+            }
+          },
+          axisLabel: {
+            style: {
+              fill: '#999'
+            }
+          },
+          axisTick: {
+            show: false
+          },
+          min: 0,
+          max: 8
+        },
+        series: [
           {
             name: '收费系统',
-            value: 167
-          },
-          {
-            name: '通信系统',
-            value: 67
+            data: [
+              2.5, 3.5, 6.5, 6.5, 7.5, 6.5, 2.5
+            ],
+            type: 'bar',
+            barStyle: {
+              fill: 'rgba(0, 186, 255, 0.4)'
+            }
           },
           {
             name: '监控系统',
-            value: 123
+            data: [
+              2.5, 3.5, 6.5, 6.5, 7.5, 6.5, 2.5
+            ],
+            type: 'line',
+            lineStyle: {
+              stroke: '#ff5ca9'
+            },
+            linePoint: {
+              radius: 4,
+              style: {
+                fill: '#ff5ca9',
+                stroke: 'transparent'
+              }
+            }
           },
           {
+            name: '通信系统',
+            data: [
+              1.3, 2.3, 5.3, 5.3, 6.3, 5.3, 1.3
+            ],
+            type: 'line',
+            smooth: true,
+            lineArea: {
+              show: true,
+              gradient: ['rgba(55, 162, 218, 0.6)', 'rgba(55, 162, 218, 0)']
+            },
+            lineStyle: {
+              lineDash: [5, 5]
+            },
+            linePoint: {
+              radius: 4,
+              style: {
+                fill: '#00db95'
+              }
+            }
+          },
+          {
+            data: [
+              0.2, 1.2, 4.2, 4.2, 5.2, 4.2, 0.2
+            ],
+            type: 'line',
             name: '供配电系统',
-            value: 55
-          },
-          {
-            name: '其他',
-            value: 98
+            lineArea: {
+              show: true,
+              gradient: ['rgba(245, 217, 79, 0.8)', 'rgba(245, 217, 79, 0.2)']
+            },
+            lineStyle: {
+              stroke: '#f5d94e'
+            },
+            linePoint: {
+              radius: 4,
+              style: {
+                fill: '#f5d94e',
+                stroke: 'transparent'
+              }
+            }
           }
-        ],
-        colors: ['#00baff', '#3de7c9', '#fff', '#ffc530', '#469f4b'],
-        unit: '件'
+        ]
       }
     }
   }
 }
 </script>
-
 <style lang="less">
-.left-chart-1 {
-  width: 100%;
-  height: 37%;
-  display: flex;
-  flex-grow: 0;
-  flex-direction: column;
-
-  .lc1-header {
-    text-align: center;
-    height: 40px;
+  .left-chart-1 {
+    width: 100%;
+    height: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 30px;
-    margin-bottom: 20px;
-  }
-
-  .lc1-details {
-    height: 50px;
-    font-size: 16px;
-    display: flex;
-    align-items: center;
-    text-indent: 20px;
-
-    span {
-      color: #096dd9;
+    flex-direction: column;  
+    
+    .rc1-header {
+      font-size: 24px;
       font-weight: bold;
-      font-size: 35px;
-      margin-left: 20px;
+      height: 30px;
+      line-height: 30px    
     }
+     .city-dec {
+       color: #07A6FF;
+       height: 15px;
   }
-
-  .lc1-chart {
+  .lcharts {
     flex: 1;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;    
   }
-}
+  }  
 </style>

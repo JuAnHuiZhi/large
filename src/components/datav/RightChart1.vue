@@ -1,6 +1,6 @@
 <template>
   <div class="right-chart-1">
-    <div class="rc1-header">赵六收费站</div>
+    <div class="rc1-header">城市环境</div>
 
     <div class="rc1-chart-container">
       <div class="left">
@@ -48,7 +48,7 @@ export default {
 }
 </script>
 
-<style lang="less">
+<style lang="less" scoped>
 .right-chart-1 {
   width: 100%;
   height: 100%;

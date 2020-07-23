@@ -14,7 +14,7 @@
         <div class="right-main-container">
           <div class="rmc-top-container">
             <dv-border-box-6 class="rmctc-left-container">
-              <mapCenter />
+              <bdmapCenter/>
             </dv-border-box-6>
             <div class="rmctc-right-container">
               <dv-border-box-6 class="rmctc-chart-1">
@@ -38,13 +38,14 @@
 </template>
 
 <script>
-import mapCenter from './mapCenter'
+// import mapCenter from './mapCenter'
 import topHeader from './topHeader'
 import RightChart1 from './RightChart1'
 import RightChart2 from './RightChart2'
 import BottomCharts from './BottomCharts'
 import LeftChart1 from './LeftChart1'
 import LeftChart2 from './LeftChart2'
+import bdmapCenter from './bdmapCenter'
 
 export default {
   name: 'DataView',
@@ -53,9 +54,10 @@ export default {
     RightChart1,
     RightChart2,
     BottomCharts,
-    mapCenter,
+    // mapCenter,
     LeftChart1,
-    LeftChart2
+    LeftChart2,
+    bdmapCenter
   },
   data () {
     return {}

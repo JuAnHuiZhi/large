@@ -24,7 +24,7 @@
                 <Right-Chart-2 />
               </dv-border-box-6>
               <dv-border-box-6 class="rmctc-chart-3">
-                <Right-Chart-2 />  
+                <Right-Chart-1 />  
               </dv-border-box-6>
             </div>
           </div>

@@ -3,10 +3,10 @@
     <div class="rc1-header">城市环境</div>
 
     <div class="rc1-chart-container">
-      <div class="left">
+      <!-- <div class="left">
         <div class="number">262</div>
         <div>设备运行总数</div>
-      </div>
+      </div> -->
 
       <dv-capsule-chart class="right" :config="config" />
     </div>
@@ -21,23 +21,23 @@ export default {
       config: {
         data: [
           {
-            name: '收费系统',
+            name: '城区A',
             value: 25
           },
           {
-            name: '通信系统',
+            name: '城区B',
             value: 66
           },
           {
-            name: '监控系统',
+            name: '城区C',
             value: 123
           },
           {
-            name: '供配电系统',
+            name: '城区D',
             value: 72
           },
           {
-            name: '其他',
+            name: '城区A',
             value: 99
           }
         ],

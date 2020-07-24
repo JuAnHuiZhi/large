@@ -1,9 +1,9 @@
 <template>
   <div class="bdmapCenter">
     <baidu-map class="map" :center="center" :zoom="15" @ready="handler" :mapStyle="mapStyle">
-      <!-- <bm-marker class="mappint" :position="point1">
+      <bm-marker class="mappint" :position="point1">
       </bm-marker>
-       <bm-marker class="mappint" :position="point2">
+       <!-- <bm-marker class="mappint" :position="point2">
       </bm-marker>
        <bm-marker class="mappint" :position="point3">
       </bm-marker>
@@ -12,7 +12,7 @@
        <bm-marker class="mappint"  :position="point5">
       </bm-marker>
        <bm-marker class="mappint"  :position="point6">
-      </bm-marker> -->
+      </bm-marker>  -->
 
     </baidu-map>
   </div>
@@ -22,8 +22,8 @@ import BMapGL from "vue-baidu-map";
 export default {
   data() {
     return {
-      center: { lng: 116.417246, lat: 39.888243 },
-      point1: { lng: 116.426425, lat: 39.889983 },
+      center: { lng: 116.441091, lat: 39.888372 },
+      point1: { lng: 116.441091, lat: 39.888372 },
       point2: { lng: 116.417246, lat: 39.888243 },
       point3: { lng: 116.40699, lat: 39.894039 },
       point4: { lng: 116.40699, lat: 39.880908 },

@@ -1,6 +1,8 @@
 <template>
   <div class="right-chart-2">
-   
+  <div class="rc3-header">
+      <div class="header-item">龙潭街道年龄分布   </div> 
+    </div>
 
     <!-- <div class="rc1-chart-container">
       <div class="left">
@@ -23,11 +25,11 @@ export default {
           {
             type: "pie",
             data: [
-              { name: "通州", value: 93 },
-              { name: "朝阳", value: 66 },
-              { name: "东城", value: 52 },
-              { name: "西城", value: 34 },
-              { name: "宣武", value: 22 }
+              { name: "未成年人", value: 93 },
+              { name: "青年", value: 66 },
+              { name: "中壮年", value: 52 },
+              { name: "老人", value: 34 },
+              { name: "未成年人", value: 22 }
             ],
             radius: ["45%", "65%"],
             insideLabel: {
@@ -56,10 +58,17 @@ export default {
   height: 100%;
   display: flex;
   flex-direction: column;
-  .rc1-header {
-    font-size: 24px;
-    font-weight: bold;
-    line-height: 24px;
+    .rc3-header {
+      display: flex; 
+      width: 100%;
+      font-size: 24px;
+      font-weight: bold;
+      height: 30px;
+      flex-direction: row;
+      .header-item {
+        flex: 1;
+        text-align: center;  
+      }
   }
   .rc1-chart-container {
     flex: 1;
@@ -69,9 +78,6 @@ export default {
     width: 30%;
     font-size: 16px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     .number {
       font-size: 34px;
       color: #096dd9;

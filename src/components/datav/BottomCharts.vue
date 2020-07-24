@@ -1,11 +1,14 @@
 <template>
   <div class="bottom-charts">
-    <div class="bc-chart-item">
+    <div class="botchart-header">龙潭街道社区人口分布</div>
+    <div class="item-wrapper">
+      <div class="bc-chart-item">
     
       <dv-active-ring-chart :config="config1" />
       <!-- <Label-Tag :config="labelConfig" /> -->
     </div>
-    <dv-decoration-2 class="decoration-1" :reverse="true" style="width:5px;" />
+      <!-- <dv-decoration-2 class="decoration-1" :reverse="true" style="width:5px;" /> -->
+    <!-- <dv-decoration-2 class="decoration-1" :reverse="true" style="width:5px;" /> -->
 
     <div class="bc-chart-item">
       
@@ -13,18 +16,19 @@
        <!-- <Label-Tag :config="labelConfig" /> -->
     </div>
 
-    <dv-decoration-2 class="decoration-2" :reverse="true" style="width:5px;" />
+    <!-- <dv-decoration-2 class="decoration-2" :reverse="true" style="width:5px;" /> -->
 
     <div class="bc-chart-item">
       <dv-active-ring-chart :config="config3" />
       <!-- <Label-Tag :config="labelConfig" /> -->
     </div>
 
-    <dv-decoration-2 class="decoration-3" :reverse="true" style="width:5px;" />
+    <!-- <dv-decoration-2 class="decoration-3" :reverse="true" style="width:5px;" /> -->
 
     <div class="bc-chart-item">
       <dv-active-ring-chart :config="config4" />
        <!-- <Label-Tag :config="labelConfig" /> -->
+    </div>  
     </div>
 
   </div>
@@ -44,11 +48,11 @@ export default {
         data: [
           {
             name: "A社区",
-            value: 15
+            value: 25
           },
           {
             name: "B社区",
-            value: 15
+            value: 25
           },
           {
             name: "C社区",
@@ -56,7 +60,7 @@ export default {
           },
           {
             name: "D社区",
-            value: 45
+            value: 25
           }
         ],
         color: ["#00baff", "#3de7c9", "#fff", "#ffc530", "#469f4b"],
@@ -67,93 +71,89 @@ export default {
         }
       },
 
-      config2: {
+       config2: {
         data: [
           {
             name: "A社区",
-            value: 50
+            value: 234
           },
           {
             name: "B社区",
-            value: 15
+            value: 673
           },
           {
             name: "C社区",
-            value: 25
+            value: 324
           },
           {
             name: "D社区",
-            value: 10
+            value: 178
           }
         ],
         color: ["#00baff", "#3de7c9", "#fff", "#ffc530", "#469f4b"],
         radius: "65%",
-        activeRadius: "70%",
         digitalFlopStyle: {
           fontSize: 16,
           fill: "#fff"
         }
       },
 
-      config3: {
+       config3: {
         data: [
           {
             name: "A社区",
-            value: 25
+            value: 980
           },
           {
             name: "B社区",
-            value: 25
+            value: 777
           },
           {
             name: "C社区",
-            value: 15
+            value: 456
           },
           {
             name: "D社区",
-            value: 35
+            value: 200
           }
         ],
         color: ["#00baff", "#3de7c9", "#fff", "#ffc530", "#469f4b"],
         radius: "65%",
-        activeRadius: "70%",
         digitalFlopStyle: {
           fontSize: 16,
           fill: "#fff"
         }
       },
-
       config4: {
         data: [
           {
             name: "A社区",
-            value: 25
+            value: 324
           },
           {
             name: "B社区",
-            value: 25
+            value: 314
           },
           {
             name: "C社区",
-            value: 25
+            value: 678
           },
           {
-            name: "D社区",  
-            value: 25
+            name: "D社区",
+            value: 333
           }
         ],
         color: ["#00baff", "#3de7c9", "#fff", "#ffc530", "#469f4b"],
         radius: "65%",
-        activeRadius: "70%",
         digitalFlopStyle: {
           fontSize: 16,
           fill: "#fff"
         }
       },
 
-      labelConfig: {
-        data: ["人口总和", "监控中心", "道路外场"]
-      }
+      // labelConfig: {
+      //   data: ["人口总和", "监控中心", "道路外场"]
+      // }
     };
   }
 };
@@ -164,19 +164,28 @@ export default {
   width: 100%;
   height: 100%;
   display: flex;
-  position: relative;
-
-  .bc-chart-item {
-    width: 15%;
-    height: 100%;
-    box-sizing: border-box;
+  flex-direction: column;
+ 
+  .item-wrapper{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: row;  
+    .bc-chart-item {
+      width: 15%;
+      height: 90%;
+      box-sizing: border-box;
+    }
   }
 
-  .bcci-header {
-    height: 50px;
-    text-align: center;
-    line-height: 50px;
-    font-size: 20px;
+  .botchart-header {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    font-size: 28px;
+    font-weight: bold;
+    text-indent: 240px;
   }
 
   .dv-active-ring-chart {
@@ -199,10 +208,11 @@ export default {
   }
   .dv-digital-flop {
     position: absolute;
+    // top: 50px
   }
   .active-ring-name {
     position: absolute;
-    top: 115px;
+    top: 100px;
   }
 }
 </style>

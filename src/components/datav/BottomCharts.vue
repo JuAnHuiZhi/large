@@ -3,7 +3,6 @@
     <div class="bc-chart-item">
     
       <dv-active-ring-chart :config="config1" />
-      <div class="bcci-header">北京</div>
       <!-- <Label-Tag :config="labelConfig" /> -->
     </div>
     <dv-decoration-2 class="decoration-1" :reverse="true" style="width:5px;" />
@@ -11,7 +10,6 @@
     <div class="bc-chart-item">
       
       <dv-active-ring-chart :config="config2" />
-      <div class="bcci-header">上海</div>
        <!-- <Label-Tag :config="labelConfig" /> -->
     </div>
 
@@ -19,7 +17,6 @@
 
     <div class="bc-chart-item">
       <dv-active-ring-chart :config="config3" />
-      <div class="bcci-header">深圳</div>
       <!-- <Label-Tag :config="labelConfig" /> -->
     </div>
 
@@ -27,7 +24,6 @@
 
     <div class="bc-chart-item">
       <dv-active-ring-chart :config="config4" />
-       <div class="bcci-header">杭州</div>
        <!-- <Label-Tag :config="labelConfig" /> -->
     </div>
 
@@ -35,117 +31,132 @@
 </template>
 
 <script>
-import LabelTag from './LabelTag'
+import LabelTag from "./LabelTag";
 
 export default {
-  name: 'BottomCharts',
+  name: "BottomCharts",
   components: {
     LabelTag
   },
-  data () {
+  data() {
     return {
       config1: {
         data: [
           {
-            name: '一级医院',
-            value: 356
+            name: "A社区",
+            value: 15
           },
           {
-            name: '二级医院',
-            value: 215
+            name: "B社区",
+            value: 15
           },
           {
-            name: '三级医院',
-            value: 90
+            name: "C社区",
+            value: 25
           },
           {
-            name: '私人诊所',
-            value: 317
+            name: "D社区",
+            value: 45
           }
         ],
-        color: ['#00baff', '#3de7c9', '#fff', '#ffc530', '#469f4b'],
-        radius: '65%',
-        activeRadius: '70%'
+        color: ["#00baff", "#3de7c9", "#fff", "#ffc530", "#469f4b"],
+        radius: "65%",
+        digitalFlopStyle: {
+          fontSize: 16,
+          fill: "#fff"
+        }
       },
 
       config2: {
         data: [
           {
-            name: '一级医院',
-            value: 615
+            name: "A社区",
+            value: 50
           },
           {
-            name: '一级医院',
-            value: 322
+            name: "B社区",
+            value: 15
           },
           {
-            name: '一级医院',
-            value: 198
+            name: "C社区",
+            value: 25
           },
           {
-            name: '一级医院',
-            value: 80
+            name: "D社区",
+            value: 10
           }
         ],
-        color: ['#00baff', '#3de7c9', '#fff', '#ffc530', '#469f4b'],
-        radius: '65%',
-        activeRadius: '70%'
+        color: ["#00baff", "#3de7c9", "#fff", "#ffc530", "#469f4b"],
+        radius: "65%",
+        activeRadius: "70%",
+        digitalFlopStyle: {
+          fontSize: 16,
+          fill: "#fff"
+        }
       },
 
       config3: {
         data: [
           {
-            name: '一级医院',
-            value: 243234
+            name: "A社区",
+            value: 25
           },
           {
-            name: '一级医院',
-            value: 512
+            name: "B社区",
+            value: 25
           },
           {
-            name: '一级医院',
-            value: 23432
+            name: "C社区",
+            value: 15
           },
           {
-            name: '一级医院',
-            value: 2343
+            name: "D社区",
+            value: 35
           }
         ],
-        color: ['#00baff', '#3de7c9', '#fff', '#ffc530', '#469f4b'],
-        radius: '65%',
-        activeRadius: '70%'
+        color: ["#00baff", "#3de7c9", "#fff", "#ffc530", "#469f4b"],
+        radius: "65%",
+        activeRadius: "70%",
+        digitalFlopStyle: {
+          fontSize: 16,
+          fill: "#fff"
+        }
       },
 
       config4: {
         data: [
           {
-            name: '一级医院',
-            value: 2343
+            name: "A社区",
+            value: 25
           },
           {
-            name: '一级医院',
-            value: 32423
+            name: "B社区",
+            value: 25
           },
           {
-            name: '一级医院',
-            value: 50
+            name: "C社区",
+            value: 25
           },
           {
-            name: '一级医院',
-            value: 2000
+            name: "D社区",  
+            value: 25
           }
         ],
-        color: ['#00baff', '#3de7c9', '#fff', '#ffc530', '#469f4b'],
-        radius: '65%',
-        activeRadius: '70%'
+        color: ["#00baff", "#3de7c9", "#fff", "#ffc530", "#469f4b"],
+        radius: "65%",
+        activeRadius: "70%",
+        digitalFlopStyle: {
+          fontSize: 16,
+          fill: "#fff"
+        }
       },
 
       labelConfig: {
-        data: ['人口总和', '监控中心', '道路外场']
+        data: ["人口总和", "监控中心", "道路外场"]
       }
-    }
+    };
   }
-}
+};
 </script>
 
 <style lang="less">
@@ -180,9 +191,18 @@ export default {
     font-size: 18px !important;
   }
 
-  .decoration-1, .decoration-2, .decoration-3 {
+  .decoration-1,
+  .decoration-2,
+  .decoration-3 {
     display: absolute;
     left: 0%;
+  }
+  .dv-digital-flop {
+    position: absolute;
+  }
+  .active-ring-name {
+    position: absolute;
+    top: 115px;
   }
 }
 </style>

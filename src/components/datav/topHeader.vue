@@ -2,9 +2,10 @@
   <div id="top-header">
     <dv-decoration-8 class="header-left-decoration"/>
     <div class="left-time">{{ gettime }}</div>  
+    <div class="left-time">天气</div>
     <dv-decoration-5 class="header-center-decoration" />
     <dv-decoration-8 class="header-right-decoration" :reverse="true" />
-    <div class="center-title">城市实时监控大屏</div>
+    <div class="center-title">智慧龙潭监控大屏</div>
   </div>
 </template>
 

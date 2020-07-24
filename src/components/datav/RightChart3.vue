@@ -1,10 +1,15 @@
 <template>
-  <div class="right-chart-1">
-    <div class="rc1-header">
-      <div class="header-item">龙潭街道人员分布</div> 
+  <div class="right-chart-3">
+    <div class="rc3-header">
+      <div class="header-item">龙潭街道房屋统计</div> 
     </div>
 
     <div class="rc1-chart-container">
+      <!-- <div class="left">
+        <div class="number">262</div>
+        <div>设备运行总数</div>
+      </div> -->
+
       <dv-capsule-chart class="right" :config="config" />
     </div>
   </div>
@@ -12,48 +17,48 @@
 
 <script>
 export default {
-  name: "RightChart1",
-  data() {
+  name: 'RightChart3',
+  data () {
     return {
       config: {
         data: [
           {
-            name: "中共党员",
-            value: 3213
+            name: '居民楼',
+            value: 73
           },
           {
-            name: "中共预备党员",
-            value: 2134
+            name: '商品用房',
+            value: 80
           },
           {
-            name: "共青团员",
-            value: 243
+            name: '办公楼',
+            value: 49
           },
           {
-            name: "民革党员",
-            value: 2342
+            name: '家属楼',
+            value: 72
           },
           {
-            name: "民建会员",
-            value: 1233
+            name: '老城区',
+            value: 99
           }
         ],
-        unit: "人"
+        unit: '套'
       }
-    };
+    }
   }
-};
+}
 </script>
 
 <style lang="less" scoped>
-.right-chart-1 {
+.right-chart-3 {
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
 
-  .rc1-header {
-    display: flex;
+  .rc3-header {
+    display: flex; 
     width: 100%;
     font-size: 18px;
     font-weight: bold;
@@ -62,7 +67,7 @@ export default {
 
     .header-item {
       flex: 1;
-      text-align: center;
+      text-align: center;  
     }
   }
 
@@ -70,6 +75,8 @@ export default {
     flex: 1;
     display: flex;
   }
+
+
   .right {
     flex: 1;
     box-sizing: border-box;

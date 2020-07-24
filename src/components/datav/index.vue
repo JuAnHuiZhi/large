@@ -18,13 +18,13 @@
             </dv-border-box-6>
             <div class="rmctc-right-container">
               <dv-border-box-6 class="rmctc-chart-1">
-                <Right-Chart-1 />
+                <Right-Chart-1/>
               </dv-border-box-6>
               <dv-border-box-6 class="rmctc-chart-2" :reverse="true">
-                <Right-Chart-2 />
+                <Right-Chart-3/>
               </dv-border-box-6>
               <dv-border-box-6 class="rmctc-chart-3">
-                <Right-Chart-1 />  
+                <Right-Chart-2/> 
               </dv-border-box-6>
             </div>
           </div>
@@ -42,6 +42,7 @@
 import topHeader from './topHeader'
 import RightChart1 from './RightChart1'
 import RightChart2 from './RightChart2'
+import RightChart3 from './RightChart3'
 import BottomCharts from './BottomCharts'
 import LeftChart1 from './LeftChart1'
 import LeftChart2 from './LeftChart2'
@@ -53,6 +54,7 @@ export default {
     topHeader,
     RightChart1,
     RightChart2,
+    RightChart3,
     BottomCharts,
     // mapCenter,
     LeftChart1,

@@ -1,53 +1,53 @@
 <template>
   <div class="right-chart-2">
-    <div class="rc1-header">孙七收费站</div>
+   
 
-    <div class="rc1-chart-container">
+    <!-- <div class="rc1-chart-container">
       <div class="left">
-        <div class="number">267</div>
-        <div>设备运行总数</div>
-      </div>
+         <div>设备运行总数</div>
+        <div class="number">267</div> 
+      </div> -->
 
       <dv-charts class="right" :option="option" />
-    </div>
+    <!-- </div> -->
   </div>
 </template>
 
 <script>
 export default {
-  name: 'RightChart2',
-  data () {
+  name: "RightChart2",
+  data() {
     return {
       option: {
         series: [
           {
-            type: 'pie',
+            type: "pie",
             data: [
-              { name: '收费系统', value: 93 },
-              { name: '通信系统', value: 66 },
-              { name: '监控系统', value: 52 },
-              { name: '供配电系统', value: 34 },
-              { name: '其他', value: 22 }
+              { name: "通州", value: 93 },
+              { name: "朝阳", value: 66 },
+              { name: "东城", value: 52 },
+              { name: "西城", value: 34 },
+              { name: "宣武", value: 22 }
             ],
-            radius: ['45%', '65%'],
+            radius: ["45%", "65%"],
             insideLabel: {
               show: false
             },
             outsideLabel: {
               labelLineEndLength: 10,
-              formatter: '{percent}%\n{name}',
+              formatter: "{percent}%\n{name}",
               style: {
                 fontSize: 14,
-                fill: '#fff'
+                fill: "#fff"
               }
             }
           }
         ],
-        color: ['#00baff', '#3de7c9', '#fff', '#ffc530', '#469f4b']
+        color: ["#00baff", "#3de7c9", "#fff", "#ffc530", "#469f4b"]
       }
-    }
+    };
   }
-}
+};
 </script>
 
 <style lang="less">
@@ -59,8 +59,7 @@ export default {
   .rc1-header {
     font-size: 24px;
     font-weight: bold;
-    height: 30px;
-    line-height: 30px;
+    line-height: 24px;
   }
   .rc1-chart-container {
     flex: 1;
@@ -82,8 +81,8 @@ export default {
   }
   .right {
     flex: 1;
-    padding-bottom: 20px;
-    padding-right: 20px;
+    // padding-bottom: 20px;
+    margin: 0 auto;
     box-sizing: border-box;
   }
 }

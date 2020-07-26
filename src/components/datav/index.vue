@@ -21,15 +21,15 @@
                 <Right-Chart-1 />
               </dv-border-box-6>
               <dv-border-box-6 class="rmctc-chart-2" :reverse="true">
-                <Right-Chart-2 />
+                <Right-Chart-3 />
               </dv-border-box-6>
               <dv-border-box-6 class="rmctc-chart-3">
-                <Right-Chart-3 />  
+                <Right-Chart-2 />  
               </dv-border-box-6>
             </div>
           </div>
           <dv-border-box-6 class="rmc-bottom-container">
-            <Bottom-Charts />
+            <BottomChart2/>
           </dv-border-box-6>
         </div>
       </dv-border-box-1>
@@ -44,6 +44,7 @@ import RightChart1 from './RightChart1'
 import RightChart2 from './RightChart2'
 import RightChart3 from './RightChart3'
 import BottomCharts from './BottomCharts'
+import BottomChart2 from  './BottomChart2'
 import LeftChart1 from './LeftChart1'
 import LeftChart2 from './LeftChart2'
 import bdmapCenter from './bdmapCenter'
@@ -56,6 +57,7 @@ export default {
     RightChart2,
     RightChart3,
     BottomCharts,
+    BottomChart2,
     // mapCenter,
     LeftChart1,
     LeftChart2,

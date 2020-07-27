@@ -1,36 +1,32 @@
 <template>
   <div class="bottom-charts">
     <div class="botchart-header">龙潭街道社区人口分布</div>
-    <!-- <div class="item-wrapper"> -->
+    <div class="item-wrapper">
       <div class="bc-chart-item">
     
       <dv-active-ring-chart :config="config1" />
     </div>
-      <!-- <dv-decoration-2 class="decoration-1" :reverse="true" style="width:5px;" /> -->
-    <!-- <dv-decoration-2 class="decoration-1" :reverse="true" style="width:5px;" /> -->
 
-    <!-- <div class="bc-chart-item">
+    <div class="bc-chart-item">
       
       <dv-active-ring-chart :config="config2" />
        <Label-Tag :config="labelConfig" />
-    </div> -->
+    </div> 
 
-    <!-- <dv-decoration-2 class="decoration-2" :reverse="true" style="width:5px;" /> -->
 
-    <!-- <div class="bc-chart-item">
+    <div class="bc-chart-item">
       <dv-active-ring-chart :config="config3" />
       <Label-Tag :config="labelConfig" />
-    </div> -->
+    </div> 
 
-    <!-- <dv-decoration-2 class="decoration-3" :reverse="true" style="width:5px;" /> -->
 
-    <!-- <div class="bc-chart-item">
+    <div class="bc-chart-item">
       <dv-active-ring-chart :config="config4" />
        <Label-Tag :config="labelConfig" />
-    </div>   -->
+    </div>  
     </div>
 
-  <!-- </div> -->
+     </div>
 </template>
 
 <script>
@@ -172,7 +168,7 @@ export default {
     flex-direction: row;  
     .bc-chart-item {
       width: 15%;
-      height: 90%;
+      height: 100%;
       box-sizing: border-box;
     }
   }

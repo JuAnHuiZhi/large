@@ -1,28 +1,17 @@
 <template>
   <div class="bdmapCenter">
-    <baidu-map class="map" :center="center" :zoom="15" @ready="handler" :mapStyle="mapStyle">
-      <bm-marker class="mappint" :position="point1">
-      </bm-marker>
-       <!-- <bm-marker class="mappint" :position="point2">
-      </bm-marker>
-       <bm-marker class="mappint" :position="point3">
-      </bm-marker>
-       <bm-marker class="mappint" :position="point4">
-      </bm-marker>
-       <bm-marker class="mappint"  :position="point5">
-      </bm-marker>
-       <bm-marker class="mappint"  :position="point6">
-      </bm-marker>  -->
-
+    <baidu-map class="map" @ready="handler" :mapStyle="mapStyle">
+      <!-- <bm-marker class="mappint" :position="point1">
+      </bm-marker> -->
     </baidu-map>
   </div>
 </template>
 <script>
 import BMapGL from "vue-baidu-map";
+import imgUrl from "./img/map.png"
 export default {
   data() {
     return {
-      center: { lng: 116.441091, lat: 39.888372 },
       point1: { lng: 116.441091, lat: 39.888372 },
       point2: { lng: 116.417246, lat: 39.888243 },
       point3: { lng: 116.40699, lat: 39.894039 },
@@ -196,21 +185,30 @@ export default {
       this.show = true;
     },
     handler({ BMap, map }) {
-      console.log(BMap, map + "地图api");
+      console.log(BMap, map + "地图api")
       // lng: 116.417246, lat: 39.888243
-    
+      var point = new BMap.Point(116.443507,39.890756)
+      map.centerAndZoom(point,16)
+      var icon = new BMap.Icon(imgUrl,new BMap.Size(49,49),{
+        imgageOffset: new BMap.Size(0,0,) 
+      })
+      var marker = new BMap.Marker(new BMap.Point(116.446884,39.896898),{icon:icon})
+      var marker1 = new BMap.Marker(new BMap.Point(116.447556,39.894219),{icon:icon}) 
+      var marker2 = new BMap.Marker(new BMap.Point(116.441419,39.891592),{icon:icon}) 
+      var marker3 = new BMap.Marker(new BMap.Point(116.44513,39.887256),{icon:icon}) 
+      var marker4 = new BMap.Marker(new BMap.Point(116.444742,39.885848),{icon:icon}) 
+      var marker5 = new BMap.Marker(new BMap.Point(116.450294,39.890634),{icon:icon}) 
+      map.addOverlay(marker)
+      map.addOverlay(marker1)
+      map.addOverlay(marker2)
+      map.addOverlay(marker3)
+      map.addOverlay(marker4)
+      map.addOverlay(marker5)
+      // map.setHeading(64.5)
     }
   },
   mounted: function() {
     console.log("MOUNTED");
-      var map = new BMapGL.Map("map");
-      map.centerAndZoom(new BMapGL.Point(116.28019, 40.049191), 19); // 初始化地图,设置中心点坐标和地图级别
-      map.enableScrollWheelZoom(true); // 开启鼠标滚轮缩放
-      map.setHeading(64.5);
-      map.setTilt(73);
-
-      var marker = new BMapGL.Marker(new BMapGL.Point(116.28019, 40.049191)); // 创建点
-      map.addOverlay(marker);
   }
 };
 </script>

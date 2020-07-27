@@ -22,7 +22,7 @@ export default {
             value: 3213
           },
           {
-            name: "中共预备党员",
+            name: "预备党员",
             value: 2134
           },
           {

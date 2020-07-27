@@ -8,6 +8,7 @@
 export default {
   data() {
     return {
+      imgUrl: require('./img/map.png'),
       config: {
         points: [
           {
@@ -164,10 +165,10 @@ export default {
             target: "天安门"
           }
         ],
-        // bgImgSrc: './img/map.jpg',
+        bgImgSrc: this.imgUrl,
         icon: {
           show: true,
-          src: "./img/testmap.jpg"
+          src: "./img/map.png"
         },
         text: {
           show: true
@@ -185,10 +186,6 @@ export default {
   padding: 0;
   margin: 0;
   flex-direction: column;
-  background-image: url("./img/testmap.jpg");
   background-size: 100% 100%;
-}
-img {
-  background-image: url("./img/mapPoint.png");
 }
 </style>

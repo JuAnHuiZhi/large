@@ -2,7 +2,7 @@
   <div id="top-header">
     <dv-decoration-8 class="header-left-decoration"/>
     <div class="left-time">{{ gettime }}</div>  
-    <div class="left-time">天气</div>
+    <div class="left-weater">多云转晴</div>
     <dv-decoration-5 class="header-center-decoration" />
     <dv-decoration-8 class="header-right-decoration" :reverse="true" />
     <div class="center-title">智慧龙潭监控大屏</div>
@@ -62,6 +62,11 @@ export default {
     position: absolute;
     left: 5%;
     top: 5px;  
+  }
+  .left-weater {
+    position: absolute;
+    left: 20%;
+    top: 1px;    
   }
   .center-title {
     position: absolute;

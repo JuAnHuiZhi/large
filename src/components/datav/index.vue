@@ -48,6 +48,8 @@ import BottomChart2 from  './BottomChart2'
 import LeftChart1 from './LeftChart1'
 import LeftChart2 from './LeftChart2'
 import bdmapCenter from './bdmapCenter'
+import mapCenter from './mapCenter'
+import test from  './test'
 
 export default {
   name: 'DataView',
@@ -58,10 +60,11 @@ export default {
     RightChart3,
     BottomCharts,
     BottomChart2,
-    // mapCenter,
+    mapCenter,
     LeftChart1,
     LeftChart2,
-    bdmapCenter
+    bdmapCenter,
+    test
   },
   data () {
     return {}

@@ -17,11 +17,8 @@
               <bdmapCenter/>
             </dv-border-box-6>
             <div class="rmctc-right-container">
-              <dv-border-box-6 class="rmctc-chart-1">
+              <dv-border-box-6 class="rmctc-chart-1 height100">
                 <Right-Chart-1 />
-              </dv-border-box-6>
-              <dv-border-box-6 class="rmctc-chart-2" :reverse="true">
-                <Right-Chart-3 />
               </dv-border-box-6>
               <dv-border-box-6 class="rmctc-chart-3">
                 <Right-Chart-2 />  
@@ -67,8 +64,9 @@ export default {
     test
   },
   data () {
-    return {}
-  }
+    return {
+    }
+  },
 }
 </script>
 
@@ -156,6 +154,9 @@ export default {
 
   .rmctc-chart-1, .rmctc-chart-2 , .rmctc-chart-3{
     height: 50%;
+  }
+  .height100 {
+    height: 100% ;   
   }
 }
 </style>

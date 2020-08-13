@@ -5,7 +5,7 @@
     <div class="left-weater">多云转晴</div>
     <dv-decoration-5 class="header-center-decoration" />
     <dv-decoration-8 class="header-right-decoration" :reverse="true" />
-    <div class="center-title">智慧龙潭监控大屏</div>
+    <div class="center-title">机关用房</div>
   </div>
 </template>
 

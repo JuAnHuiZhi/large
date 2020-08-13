@@ -12,23 +12,6 @@ import imgUrl from "./img/map.png"
 export default {
   data() {
     return {
-      point1: { lng: 116.441091, lat: 39.888372 },
-      point2: { lng: 116.417246, lat: 39.888243 },
-      point3: { lng: 116.40699, lat: 39.894039 },
-      point4: { lng: 116.40699, lat: 39.880908 },
-      point5: { lng: 116.41951, lat: 39.884433 },
-      point6: { lng: 116.403963, lat: 39.915119 },
-      // position: [
-      //   {
-      //     point: {
-      //      lng: 116.40699, lat: 39.887334
-      //     },
-      //     name: ''
-      //     // point: {
-      //     //  lng: 116.427392, lat: 39.888497
-      //     // }
-      //   }
-      //   ],
       show: false,
       mapStyle: {
         styleJson: [
@@ -187,17 +170,17 @@ export default {
     handler({ BMap, map }) {
       console.log(BMap, map + "地图api")
       // lng: 116.417246, lat: 39.888243
-      var point = new BMap.Point(116.443507,39.890756)
-      map.centerAndZoom(point,16)
+      var point = new BMap.Point(116.663988,39.917569)
+      map.centerAndZoom(point,12)
       var icon = new BMap.Icon(imgUrl,new BMap.Size(49,49),{
         imgageOffset: new BMap.Size(0,0,) 
       })
-      var marker = new BMap.Marker(new BMap.Point(116.446884,39.896898),{icon:icon})
-      var marker1 = new BMap.Marker(new BMap.Point(116.447556,39.894219),{icon:icon}) 
-      var marker2 = new BMap.Marker(new BMap.Point(116.441419,39.891592),{icon:icon}) 
-      var marker3 = new BMap.Marker(new BMap.Point(116.44513,39.887256),{icon:icon}) 
-      var marker4 = new BMap.Marker(new BMap.Point(116.444742,39.885848),{icon:icon}) 
-      var marker5 = new BMap.Marker(new BMap.Point(116.450294,39.890634),{icon:icon}) 
+      var marker = new BMap.Marker(new BMap.Point(116.755974,39.912699),{icon:icon})
+      var marker1 = new BMap.Marker(new BMap.Point(116.750225,39.884357),{icon:icon}) 
+      var marker2 = new BMap.Marker(new BMap.Point(116.784145,39.864423),{icon:icon}) 
+      var marker3 = new BMap.Marker(new BMap.Point(116.654789,39.832515),{icon:icon}) 
+      var marker4 = new BMap.Marker(new BMap.Point(116.75425,39.97775),{icon:icon}) 
+      var marker5 = new BMap.Marker(new BMap.Point(116.676636,40.0034),{icon:icon}) 
       map.addOverlay(marker)
       map.addOverlay(marker1)
       map.addOverlay(marker2)
@@ -208,7 +191,6 @@ export default {
     }
   },
   mounted: function() {
-    console.log("MOUNTED");
   }
 };
 </script>

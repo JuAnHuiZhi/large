@@ -1,7 +1,7 @@
 <template>
   <div class="right-chart-1">
     <div class="rc1-header">
-      <div class="header-item">龙潭街道人员分布</div> 
+      <div class="header-item">单位人员信息</div> 
     </div>
 
     <div class="rc1-chart-container">
@@ -11,6 +11,7 @@
 </template>
 
 <script>
+
 export default {
   name: "RightChart1",
   data() {
@@ -18,7 +19,7 @@ export default {
       config: {
         data: [
           {
-            name: "中共党员",
+            name: "",
             value: 3213
           },
           {
@@ -55,7 +56,7 @@ export default {
   .rc1-header {
     display: flex;
     width: 100%;
-    font-size: 18px;
+    font-size: 1em;
     font-weight: bold;
     height: 30px;
     flex-direction: row;
